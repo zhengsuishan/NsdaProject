@@ -1,0 +1,13 @@
+# -*- coding:utf-8 -*-
+# 配置数据：url/登录邮箱/密码
+
+class Data(object):
+
+    url = 'http://192.168.48.221:8001' #网站地址
+    user_email = '875707618@qq.com' #登录邮箱
+    user_password = 'test1234' #登录密码
+    implicitly_wait_time = 10 #全局等待时间
+    lodding_wait_time = 15 #网络请求等待时间
+    wait_time = 3 #非网络请求等待时间
+    event_title = '发起赛事 - NSDA' #赛事列表的标题
+    event_detail_title = '选手报名管理 - NSDA' #进入赛事页面标题
