@@ -11,7 +11,6 @@ import unittest
 from NSDAEvent.cases.login import Login
 from NSDAEvent.cases.rules import Rules
 
-
 if __name__ == '__main__':
     wait_time = Data.wait_time
     driver = webdriver.Chrome()

@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 # 登录页面操作
+
 from NSDAEvent.locators.login_locator import LoginLocator
 from NSDAEvent.settings.data import Data
 from selenium.webdriver.support.wait import WebDriverWait

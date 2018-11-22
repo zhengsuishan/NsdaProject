@@ -3,7 +3,6 @@
 import unittest
 from NSDAEvent.pages.setting_rules_page import SettingRulesPage
 
-
 class Rules(unittest.TestCase):
 
     @classmethod
