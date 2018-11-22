@@ -45,4 +45,4 @@ class EventRulesLocator(object):
     ROUND_4_DOUBLE_BUTTON = (By.XPATH, '//*[@id="data"]/div/div[4]/ul/li[4]/div[3]/label')  # 循环赛第四轮DOUBLE FLIGHT按钮
     ROUND_4_TRIPLE_BUTTON = (By.XPATH, '//*[@id="data"]/div/div[4]/ul/li[4]/div[4]/label')  # 循环赛第四轮TRIPE FLIGHT按钮
 
-    SAVE_RULES_BUTTON = (By.XPATH, '//*[@id="save"]') #确认保存循环赛设置按钮
+    SAVE_RULES_BUTTON = (By.XPATH, '//*[@id="save"]') #确认保存循环赛设置
