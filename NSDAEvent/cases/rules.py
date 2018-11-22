@@ -13,6 +13,8 @@ class Rules(unittest.TestCase):
     def test_1_set_point(self):
         self.setting_rule_page.set_points()
 
+    def test_2_set_round(self):
+        self.setting_rule_page.set_debate_round()
 
     @classmethod
     def tearDownClass(cls):

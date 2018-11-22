@@ -4,9 +4,16 @@
 class InitDriver(object):
 
     driver = None
+    action = None
 
     def set_driver(self, driver):
         self.driver = driver
 
     def get_driver(self):
         return self.driver
+
+    def set_action(self, action):
+        self.action = action
+
+    def get_action(self):
+        return self.action

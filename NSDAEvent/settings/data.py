@@ -11,5 +11,9 @@ class Data(object):
     event_title = '发起赛事 - NSDA' #赛事列表的标题
     event_detail_title = '选手报名管理 - NSDA' #进入赛事页面标题
 
+    #------------------赛事规则设置部分------------------------
     point_low = 20 #分值区间下限
     point_high = 30 #分值区间上限
+    DEBATE_ROUND_TIMES = 4 #辩论循环赛轮数
+
+

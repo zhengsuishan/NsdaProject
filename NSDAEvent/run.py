@@ -20,8 +20,12 @@ if __name__ == '__main__':
         lambda driver: driver.find_element(LoginLocator.LOGIN_BUTTON[0], LoginLocator.LOGIN_BUTTON[1]))
     driver.implicitly_wait(Data.implicitly_wait_time)
 
-    InitDriver.set_driver(InitDriver, driver=driver)
+    action = webdriver.TouchActions(driver)
 
+    InitDriver.set_driver(InitDriver, driver=driver)
+    InitDriver.set_action(InitDriver, action=action)
+
+    #-----------------------------执行测试用例----------------------------------------------------
     suite_login = unittest.TestLoader().loadTestsFromTestCase(Login) #登录赛事管理员
     suite_rules = unittest.TestLoader().loadTestsFromTestCase(Rules) #设置比赛规则
 
