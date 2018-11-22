@@ -1,0 +1,7 @@
+赛事后台自动化测试用例，使用页面设计模式
+
+settings模块
+locators模块
+pages模块
+cases模块
+run.py
