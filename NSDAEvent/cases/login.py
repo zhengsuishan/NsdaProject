@@ -3,6 +3,7 @@
 import unittest
 from NSDAEvent.pages.login_page import LoginPage
 
+
 class Login(unittest.TestCase):
 
     @classmethod

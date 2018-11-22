@@ -4,7 +4,6 @@ from NSDAEvent.locators.event_rules_locator import EventRulesLocator
 from selenium.webdriver.support.wait import WebDriverWait
 from NSDAEvent.settings.data import Data
 import time
-
 from NSDAEvent.pages.init_driver import InitDriver
 
 class SettingRulesPage(object):

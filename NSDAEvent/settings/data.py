@@ -1,6 +1,5 @@
 # -*- coding:utf-8 -*-
 # 配置数据：url/登录邮箱/密码
-
 class Data(object):
 
     url = 'http://192.168.48.221:8001' #网站地址

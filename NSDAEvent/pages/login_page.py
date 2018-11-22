@@ -5,7 +5,6 @@ from NSDAEvent.settings.data import Data
 from selenium.webdriver.support.wait import WebDriverWait
 from NSDAEvent.locators.event_rules_locator import EventRulesLocator
 import time
-
 from NSDAEvent.pages.init_driver import InitDriver
 
 class LoginPage(object):
