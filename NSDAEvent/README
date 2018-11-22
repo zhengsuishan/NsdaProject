@@ -4,4 +4,4 @@ settings模块
 locators模块
 pages模块
 cases模块
-run.py
+run.py组织测试用例

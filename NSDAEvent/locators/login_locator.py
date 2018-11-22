@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-# 登录模块
+# 登录定位器
 from selenium.webdriver.common.by import By
 
 class LoginLocator(object):

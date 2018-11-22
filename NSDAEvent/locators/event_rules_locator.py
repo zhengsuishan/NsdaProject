@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-# 比赛规则设置模块
+# 比赛规则设置定位器
 from selenium.webdriver.common.by import By
 
 class EventRulesLocator(object):

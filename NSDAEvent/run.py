@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-# 组织测试用例
+# 组织测试用例，运行测试用例前初始化driver
 
 from selenium import webdriver
 from NSDAEvent.settings.data import Data

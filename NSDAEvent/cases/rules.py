@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-# 设置规则测试用例
+# 设置比赛规则测试用例
 import unittest
 from NSDAEvent.pages.setting_rules_page import SettingRulesPage
 

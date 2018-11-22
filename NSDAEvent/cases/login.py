@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-# 登录测试用例
+# 登录赛事后台测试用例
 import unittest
 from NSDAEvent.pages.login_page import LoginPage
 

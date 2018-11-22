@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-# 赛事规则设置
+# 赛事规则设置UI操作
 from NSDAEvent.locators.event_rules_locator import EventRulesLocator
 from selenium.webdriver.support.wait import WebDriverWait
 from NSDAEvent.settings.data import Data
