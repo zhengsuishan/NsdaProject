@@ -1,24 +1,27 @@
 # -*- coding:utf-8 -*-
 # 登录页面操作
-from NSDAEvent.pages.base_page import BasePage
 from NSDAEvent.locators.login_locator import LoginLocator
 from NSDAEvent.settings.data import Data
 from selenium.webdriver.support.wait import WebDriverWait
 from NSDAEvent.locators.event_rules_locator import EventRulesLocator
 import time
 
-class LoginPage(BasePage):
+from NSDAEvent.pages.init_driver import InitDriver
+
+class LoginPage(object):
 
     login_email = None
     login_password = None
     lodding_wait_time = None
     wait_time = None
+    driver = None
 
     def get_data(self):
         self.login_email = Data.user_email
         self.login_password = Data.user_password
         self.lodding_wait_time = Data.lodding_wait_time
         self.wait_time = Data.wait_time
+        self.driver = InitDriver.get_driver(InitDriver)
 
     def login(self):
         self.driver.find_element(LoginLocator.LOGIN_BUTTON[0], LoginLocator.LOGIN_BUTTON[1]).click() #点击右上角登录

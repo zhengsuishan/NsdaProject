@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 # 登录模块
 
-from  selenium.webdriver.common.by import By
+from selenium.webdriver.common.by import By
 
 class LoginLocator(object):
 

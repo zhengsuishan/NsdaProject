@@ -11,3 +11,6 @@ class Data(object):
     wait_time = 3 #非网络请求等待时间
     event_title = '发起赛事 - NSDA' #赛事列表的标题
     event_detail_title = '选手报名管理 - NSDA' #进入赛事页面标题
+
+    point_low = 20 #分值区间下限
+    point_high = 30 #分值区间上限
