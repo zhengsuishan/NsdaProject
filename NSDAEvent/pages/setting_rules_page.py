@@ -5,7 +5,6 @@ from selenium.webdriver.support.wait import WebDriverWait
 from NSDAEvent.settings.data import Data
 import time
 from NSDAEvent.pages.init_driver import InitDriver
-from selenium.webdriver.common.touch_actions import TouchActions
 
 class SettingRulesPage(object):
 
@@ -19,6 +18,7 @@ class SettingRulesPage(object):
         self.driver = InitDriver.get_driver(InitDriver)
         self.action = InitDriver.get_action(InitDriver)
         self.lodding_time = Data.lodding_wait_time #等待时间
+        self.wait_time = Data.wait_time
         self.point_low = Data.point_low #分值区间下限
         self.point_high = Data.point_high #分值区间上限
         self.debate_round_times = Data.DEBATE_ROUND_TIMES #辩论循环赛轮数
@@ -65,7 +65,19 @@ class SettingRulesPage(object):
         time.sleep(1.0)
 
         self.driver.find_element(EventRulesLocator.SAVE_RULES_BUTTON[0], EventRulesLocator.SAVE_RULES_BUTTON[1]).click()
-        time.sleep(5.0)
+        time.sleep(3.0)
+
+        #---------------------刷新页面-------------------------
+        self.driver.refresh()
+        WebDriverWait(self.driver, self.lodding_time).until(lambda driver:driver.find_element(EventRulesLocator.DEBATE_ADD_ROUND[0], EventRulesLocator.DEBATE_ADD_ROUND[1]))
+        try:
+            WebDriverWait(self.driver, self.wait_time).until(lambda driver:driver.find_element(EventRulesLocator.ROUND_5[0], EventRulesLocator.ROUND_5[1]))
+            return '循环赛规则设置成功'
+        except Exception as e:
+            return '循环赛规则设置失败'
+
+    #淘汰赛规则设置
+    def
 
 
 

@@ -6,7 +6,7 @@ class EventRulesLocator(object):
 
     EVENT_TITLE = (By.TAG_NAME, 'h3') #赛事标题
 
-    #辩论赛事
+    #--------------------------------辩论赛事,循环赛规则设置--------------------------------------
     DEBATE_EVENT_RULES_SETTING_BUTTON = (By.XPATH, '//*[@id="lkRuleSettings"]/p') #比赛规则设置按钮
     DEBATE_CYCLE_EVENT_SETTING_BUTTON = (By.XPATH, '/html/body/div[3]/div[2]/div[1]/a[1]') #循环赛规则设置按钮
     DEBATE_TEMP_SETTING_EVENT_DAY = (By.ID, 'btnAdminSetDate') #临时把比赛日期设置为今天按钮
@@ -44,6 +44,8 @@ class EventRulesLocator(object):
     ROUND_4_DOUBLE_BUTTON = (By.XPATH, '//*[@id="data"]/div/div[4]/ul/li[4]/div[3]/label')  # 循环赛第四轮DOUBLE FLIGHT按钮
     ROUND_4_TRIPLE_BUTTON = (By.XPATH, '//*[@id="data"]/div/div[4]/ul/li[4]/div[4]/label')  # 循环赛第四轮TRIPE FLIGHT按钮
 
+    ROUND_5 = (By.XPATH, '//*[@id="data"]/div/div[4]/ul/li[5]/div[1]/label') #循环赛第五轮，用户判断规则是否设置成功
+
     SAVE_RULES_BUTTON = (By.XPATH, '//*[@id="save"]') #确认保存循环赛设置按钮
 
     LIST_ROUND_MATCH = [ROUND_1_MATCH_BUTTON, ROUND_2_MATCH_BUTTON, ROUND_3_MATCH_BUTTON, ROUND_4_MATCH_BUTTON] #匹配方式集合
@@ -52,3 +54,9 @@ class EventRulesLocator(object):
     LIST_SINGLE = [ROUND_1_SINGLE_BUTTON, ROUND_2_SINGLE_BUTTON, ROUND_3_SINGLE_BUTTON, ROUND_4_SINGLE_BUTTON] #SINGLE FILFHT集合
     LIST_DOUBLE = [ROUND_1_DOUBLE_BUTTON, ROUND_2_DOUBLE_BUTTON, ROUND_3_DOUBLE_BUTTON, ROUND_4_DOUBLE_BUTTON] #DOUBLE FLIGHT集合
     LIST_TRIPLE = [ROUND_1_TRIPLE_BUTTON, ROUND_2_TRIPLE_BUTTON, ROUND_3_TRIPLE_BUTTON, ROUND_4_TRIPLE_BUTTON] #TRIPE FLIGHT集合
+
+    #------------------------------辩论赛事，淘汰赛规则设置----------------------------------
+    DEBATE_OUT_EVENT_SETTING_BUTTON = (By.XPATH, '/html/body/div[3]/div[2]/div[1]/a[2]') #淘汰赛规则设置按钮
+    DEBATE_WIN_NUMBER = (By.XPATH, '//*[@id="knock"]/div/div[1]/input') #晋级队伍输入框
+    DEBATE_CONFIRM_BUTTON = (By.XPATH, '//*[@id="knock"]/div/div[1]/a') #保存按钮
+

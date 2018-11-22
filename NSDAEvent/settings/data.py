@@ -15,5 +15,6 @@ class Data(object):
     point_low = 20 #分值区间下限
     point_high = 30 #分值区间上限
     DEBATE_ROUND_TIMES = 4 #辩论循环赛轮数
+    DEBATE_WIN_NUM = 10 #晋级队伍叔
 
 
