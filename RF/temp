@@ -1,3 +1,0 @@
-${headers}=  Create Dictionary  Origin=http://203.110.166.228:8001  X-Requested-With=XMLHttpRequest
-    ${headers}=  Create Dictionary  User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36
-    ${headers}=  Create Dictionary  Content-Type=application/x-www-form-urlencoded; charset=UTF-8
