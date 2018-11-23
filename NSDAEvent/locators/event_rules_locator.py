@@ -60,3 +60,26 @@ class EventRulesLocator(object):
     DEBATE_WIN_NUMBER = (By.XPATH, '//*[@id="knock"]/div/div[1]/input') #晋级队伍输入框
     DEBATE_CONFIRM_BUTTON = (By.XPATH, '//*[@id="knock"]/div/div[1]/a') #保存按钮
 
+    PARTIAL_JUDGMENT = (By.XPATH, '//*[@id="knock"]/div/div[2]/ul/li[1]/div[1]/input') #裁判输入框
+    PARTIAL_SINGLE_BUTTON = (By.XPATH, '//*[@id="knock"]/div/div[2]/ul/li[1]/div[2]/label') #SINGLE FLIGHT
+    PARTIAL_DOUBLE_BUTTON = (By.XPATH, '//*[@id="knock"]/div/div[2]/ul/li[1]/div[3]/label') #DOUBLE FLIGHT
+    PARTIAL_TRIPLE_BUTTON = (By.XPATH, '//*[@id="knock"]/div/div[2]/ul/li[1]/div[4]/label') #TRIPLE FLIGHT
+
+    QUARTERFINALS_JUDGMENT = (By.XPATH, '//*[@id="knock"]/div/div[2]/ul/li[2]/div[1]/input') #裁判输入框
+    QUARTERFINALS_SINGLE_BUTTON = (By.XPATH, '//*[@id="knock"]/div/div[2]/ul/li[2]/div[2]/label') #SINGLE FLIGHT
+    QUARTERFINALS_DOUBLE_BUTTON = (By.XPATH, '//*[@id="knock"]/div/div[2]/ul/li[2]/div[3]/label') #DOUBLE FLIGHT
+    QUARTERFINALS_TRIPLE_BUTTON = (By.XPATH, '//*[@id="knock"]/div/div[2]/ul/li[2]/div[4]/label') #TRIPLE FLIGHT
+
+    SEMIFINALS_JUDGMENT = (By.XPATH, '//*[@id="knock"]/div/div[2]/ul/li[3]/div[1]/input') #裁判输入框
+    SEMIFINALS_SINGLE_BUTTON = (By.XPATH, '//*[@id="knock"]/div/div[2]/ul/li[3]/div[2]/label') #SINGLE FLIGHT
+    SEMIFINALS_DOUBLE_BUTTON = (By.XPATH, '//*[@id="knock"]/div/div[2]/ul/li[3]/div[3]/label') #DOUBLE FLIGHT
+    SEMIFINALS_TRIPLE_BUTTON = (By.XPATH, '//*[@id="knock"]/div/div[2]/ul/li[3]/div[4]/label') #TRIPLE FLIGHT
+
+    FINALS_JUDGMENT = (By.XPATH, '//*[@id="knock"]/div/div[2]/ul/li[4]/div[1]/input') #裁判输入框
+    FINALS_SINGLE_BUTTON = (By.XPATH, '//*[@id="knock"]/div/div[2]/ul/li[4]/div[2]/label') #SINGLE FLIGHT
+    FINALS_DOUBLE_BUTTON = (By.XPATH, '//*[@id="knock"]/div/div[2]/ul/li[4]/div[3]/label') #DOUBLE FLIGHT
+    FINALS_TRIPLE_BUTTON = (By.XPATH, '//*[@id="knock"]/div/div[2]/ul/li[4]/div[4]/label') #TRIPLE FLIGHT
+
+    SAVE_BUTTON = (By.XPATH, '//*[@id="save"]') #点击保存按钮
+
+

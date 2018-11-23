@@ -16,6 +16,9 @@ class Rules(unittest.TestCase):
     def test_2_set_round(self):
         self.setting_rule_page.set_debate_round()
 
+    def test_3_set_out(self):
+        self.setting_rule_page.set_out()
+
     @classmethod
     def tearDownClass(cls):
         pass

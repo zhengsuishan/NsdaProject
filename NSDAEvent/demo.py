@@ -7,17 +7,20 @@ import time
 from selenium.webdriver.common.touch_actions import TouchActions
 
 driver = webdriver.Chrome()
-driver.get('http://192.168.48.221:8001/eventmanage/eventmanage/cyclingsetting/45')
+driver.get('http://192.168.48.221:8001/')
 print(driver.maximize_window())
 
 
 time.sleep(3.0)
 
+if '关于我们' in driver.page_source:
+    print('yes')
+else:
+    print('else')
 
-
-action = webdriver.TouchActions(driver)
-action.scroll(100, 200).perform()
+driver.f
 time.sleep(3.0)
-driver.find_element_by_xpath()
+
+
 driver.close()
 
