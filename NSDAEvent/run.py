@@ -10,6 +10,7 @@ from NSDAEvent.pages.init_driver import InitDriver
 import unittest
 from NSDAEvent.cases.login import Login
 from NSDAEvent.cases.rules import Rules
+from NSDAEvent.cases.judge import Judge
 
 if __name__ == '__main__':
     wait_time = Data.wait_time
@@ -28,7 +29,10 @@ if __name__ == '__main__':
     #-----------------------------执行测试用例----------------------------------------------------
     suite_login = unittest.TestLoader().loadTestsFromTestCase(Login) #登录赛事管理员
     suite_rules = unittest.TestLoader().loadTestsFromTestCase(Rules) #设置比赛规则
+    suite_judge = unittest.TestLoader().loadTestsFromTestCase(Judge) #添加裁判测试用例
 
-    suite = unittest.TestSuite([suite_login, suite_rules])
+    suite = unittest.TestSuite([suite_login, suite_rules, suite_judge])
 
     unittest.TextTestRunner(verbosity=2).run(suite)
+
+    driver.close() #关闭浏览器

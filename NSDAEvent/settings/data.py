@@ -3,8 +3,8 @@
 class Data(object):
 
     url = 'http://192.168.48.221:8001' #网站地址
-    user_email = '875707618@qq.com' #登录邮箱
-    user_password = 'test1234' #登录密码
+    user_email = 'chengyongzhao4@hotmail.com' #登录邮箱
+    user_password = '123abc' #登录密码
     implicitly_wait_time = 10 #全局等待时间
     lodding_wait_time = 15 #网络请求等待时间
     wait_time = 3 #非网络请求等待时间
@@ -16,5 +16,6 @@ class Data(object):
     point_high = 30 #分值区间上限
     DEBATE_ROUND_TIMES = 4 #辩论循环赛轮数
     DEBATE_WIN_NUM = 10 #晋级队伍叔
+    SUCCESS_PTOMOTE = '成功临时把比赛时间设为当天' #成功临时把比赛时间设置为今天提示
 
 
