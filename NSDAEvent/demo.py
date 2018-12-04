@@ -11,6 +11,7 @@ driver.get('http://192.168.48.221:8001/')
 driver.maximize_window()
 time.sleep(3.0)
 
+
 driver.find_element_by_xpath('//*[@id="dataHead"]/ul[2]/li/a[2]').click()
 time.sleep(1.0)
 driver.switch_to.frame('fg-layer-iframe1')
@@ -22,6 +23,4 @@ driver.find_element_by_xpath('//*[@id="txtPwd1"]').send_keys('test1234')
 driver.find_element_by_xpath('//*[@id="btn_register"]').click()
 driver.find_element_by_xpath('//*[@id="btn_register"]').click()
 driver.find_element_by_xpath('//*[@id="btn_register"]').click()
-driver.find_element_by_xpath('//*[@id="btn_register"]').click()
-
-
+driver.find_element_by_xpath('//*[@id="btn_register"]').is_displayed()
