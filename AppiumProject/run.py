@@ -8,6 +8,9 @@ from AppiumProject.wechat.init_para import InitPara
 
 if __name__ == '__main__':
 
+    #----------------init_para.py文件中修改设备udid，发送的文本内容，需要点击的群坐标----------------------
+
+
     desired_caps = InitPara.desired_caps
     driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
 

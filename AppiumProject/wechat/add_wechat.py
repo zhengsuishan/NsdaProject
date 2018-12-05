@@ -14,8 +14,8 @@ class AddWechat(object):
     number = None
     wait_time = 3
     launch_time = 15
-    qun_location_x = 612
-    qun_location_y = 524.5
+    qun_location_x = InitPara.qun_location_x
+    qun_location_y = InitPara.qun_location_y
     click_qun_cmd = 'adb -s %s shell input tap %d %d'%(udid, qun_location_x, qun_location_y)
     swipe_cmd = 'adb -s %s shell input swipe 540 1080 540 1350'%udid
 
@@ -31,11 +31,11 @@ class AddWechat(object):
         time.sleep(1.0)
         os.popen(self.click_qun_cmd)
         time.sleep(1.0)
-        driver.find_element(Locators.CHAT_RIGHT[0], Locators.CHAT_RIGHT[1]).click()
+        self.driver.find_element(Locators.CHAT_RIGHT[0], Locators.CHAT_RIGHT[1]).click()
         time.sleep(1.0)
         WebDriverWait(self.driver, self.wait_time).until(lambda driver:driver.find_element(Locators.GROUP_MEMBER_ID[0], Locators.GROUP_MEMBER_ID[1]))
 
-        while '查看全部群成员' not in driver.page_source:
+        while Locators.GROUP_MEMBER_ALL[0] not in self.driver.page_source:
             os.popen(self.swipe_cmd)
             time.sleep(1.0)
         else:
@@ -93,13 +93,15 @@ class AddWechat(object):
         num1 = int(count/5)                     #用于计算滑动次数
         num2 = int(count%5)                     #用于计算点击那个头像
 
-        #--------------滑动到顶部--------------------
-        swipe_top_cmd = 'adb -s %s shell input swipe %d %d %d %d %d'%(self.udid, InitPara.vivo_swipe_top_x, InitPara.vivo_swipe_top_y1,
-                                                             InitPara.vivo_swipe_top_x, InitPara.vivo_swipe_top_y2, InitPara.vivo_swipe_top_time)
-        os.popen(swipe_top_cmd)
-        time.sleep(1.0)
-
         if self.udid == '5761c059':
+
+            # --------------滑动到顶部--------------------
+            swipe_top_cmd = 'adb -s %s shell input swipe %d %d %d %d %d' % (
+            self.udid, InitPara.vivo_swipe_top_x, InitPara.vivo_swipe_top_y1,
+            InitPara.vivo_swipe_top_x, InitPara.vivo_swipe_top_y2, InitPara.vivo_swipe_top_time)
+            os.popen(swipe_top_cmd)
+            time.sleep(1.0)
+
             for i in range(0, num1):
                 swipe_cmd = 'adb -s %s shell input swipe %d %d %d %d %d'%(self.udid, InitPara.vivo_user_swipe_x, InitPara.vivo_user_swipe_y1,
                                                                           InitPara.vivo_user_swipe_x, InitPara.vivo_user_swipe_y2, InitPara.vivo_swipe_time)
@@ -115,10 +117,34 @@ class AddWechat(object):
                 self.udid, InitPara.vivo_user_x + InitPara.vivo_user_x_dur * num2, InitPara.vivo_user_y)
                 os.popen(click_cmd)
                 time.sleep(1.0)
+        elif self.udid == 'd102deb37d13':
+
+            # --------------滑动到顶部--------------------
+            swipe_top_cmd = 'adb -s %s shell input swipe %d %d %d %d %d' % (
+            self.udid, InitPara.xiaomi_swipe_top_x, InitPara.xiaomi_swipe_top_y1,
+            InitPara.xiaomi_swipe_top_x, InitPara.xiaomi_swipe_top_y2, InitPara.xiaomi_swipe_top_time)
+            os.popen(swipe_top_cmd)
+            time.sleep(1.0)
+
+            for i in range(0, num1):
+                swipe_cmd = 'adb -s %s shell input swipe %d %d %d %d %d'%(self.udid, InitPara.xiaomi_user_swipe_x, InitPara.xiaomi_user_swipe_y1,
+                                                                          InitPara.xiaomi_user_swipe_x, InitPara.xiaomi_user_swipe_y2, InitPara.xiaomi_swipe_time)
+                os.popen(swipe_cmd)
+                time.sleep(1.0)
+            if num2 == 0:
+                click_cmd = 'adb -s %s shell input tap %d %d' % (
+                self.udid, InitPara.xiaomi_user_x, InitPara.xiaomi_user_y)
+                os.popen(click_cmd)
+                time.sleep(1.0)
+            else:
+                click_cmd = 'adb -s %s shell input tap %d %d' % (
+                self.udid, InitPara.xiaomi_user_x + InitPara.xiaomi_user_x_dur * num2, InitPara.xiaomi_user_y)
+                os.popen(click_cmd)
+                time.sleep(1.0)
         else:
             pass
 
-        self.send_verfiy_message()
+        self.send_verfiy_message(AddWechat)
 
     def read_count(self):
         file_name = 'C:\\pythonworkspace\\AppiumProject\\wechat\\send_count'
@@ -132,4 +158,4 @@ class AddWechat(object):
         file.close()
 
 if __name__ == '__main__':
-    pass
+    AddWechat.select_member(AddWechat)

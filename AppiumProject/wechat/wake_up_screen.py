@@ -13,7 +13,7 @@ class WakeUpScreen(object):
     def vivo(self):
         wake_cmd = 'adb -s 5761c059 shell input keyevent 26'
         os.popen(wake_cmd)
-        time.sleep(1.0)
+        time.sleep(2.0)
 
         swipe_cmd = 'adb -s 5761c059 shell input swipe 1000 1200 1000 100 100'
         os.popen(swipe_cmd)
@@ -43,5 +43,14 @@ class WakeUpScreen(object):
         os.popen(cmd_1)
         time.sleep(0.5)
 
+    def xiaomi(self):
+        wake_cmd = 'adb -s d102deb37d13 shell input keyevent 26'
+        os.popen(wake_cmd)
+        time.sleep(2.0)
+
+        swipe_cmd = 'adb -s d102deb37d13 shell input swipe 360 800 360 100 100'
+        os.popen(swipe_cmd)
+        time.sleep(1.0)
+
 if __name__ == '__main__':
-    WakeUpScreen.vivo(WakeUpScreen)
+    WakeUpScreen.xiaomi(WakeUpScreen)
