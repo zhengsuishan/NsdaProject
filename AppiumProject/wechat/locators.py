@@ -17,10 +17,13 @@ class Locators(object):
     GROUP_MEMBER_ID = (By.ID, 'com.tencent.mm:id/dnm')
     GROUP_MEMBER_ALL = (By.NAME, '查看全部群成员')
     GROUP_SEARCH_TEXT = (By.NAME, '搜索')
+    GROUP_MEMBER_QUN_ID = (By.ID, 'com.tencent.mm:id/m6')
 
     #-----------------添加界面----------------------
     ADD_NEWS = (By.NAME, '发消息')
     ADD_CONTACT= (By.NAME, '添加到通讯录')
+    ADD_SETTING_BEIZHU = (By.NAME, '设置备注和标签')
+    ADD_PROMOTE = (By.NAME, '由于对方的隐私设置，你无法通过群聊将其添加至通讯录。')
 
     #-----------------验证界面------------------
     VARIFY_APPLY = (By.NAME, '验证申请')

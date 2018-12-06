@@ -16,6 +16,7 @@ if __name__ == '__main__':
 
     InitDriver.set_driver(InitDriver, driver=driver)
     AddWechat.get_driver(AddWechat)
+
     AddWechat.go_group(AddWechat)
     AddWechat.select_member(AddWechat)
 
