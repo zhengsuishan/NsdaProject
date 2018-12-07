@@ -22,10 +22,17 @@ class AddWechat(object):
     number_0 = 0 #用于计算滑动次数number_0
     number_1 = 1
     number_bool = False
+    qun_num = InitPara.qun_number
 
     def get_driver(self):
         self.driver = InitDriver.get_driver(InitDriver)
         self.number = self.read_count(AddWechat)
+
+        if self.number >= self.qun_num:
+            self.driver = None
+            raise '已全部发送过消息'
+        else:
+            pass
 
     def go_group(self):
         try:

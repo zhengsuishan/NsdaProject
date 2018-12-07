@@ -8,6 +8,7 @@ class InitPara(object):
     add_text = '加个好友，交个朋友可以吗？哈哈'
     qun_location_x = 408
     qun_location_y = 242.5
+    qun_number = 500 #群人数
 
     desired_caps = {'platformName': 'Android',
                     'platformVersion': '8.1.0',
